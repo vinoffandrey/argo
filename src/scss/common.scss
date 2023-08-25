@@ -1,0 +1,92 @@
+//========================================================================================================================================================
+a {
+	transition: all .3s ease 0s;
+	&:active, &:focus, &:hover {
+		opacity: .8;
+	}
+}
+.title-35 {
+	color: #FFF;
+	@include adaptiveValue("font-size", 35, 20, $containerWidth, $minWidth, 1);
+	font-weight: 800;
+	@include adaptiveValue("line-height", 45, 30, $containerWidth, $minWidth, 1);
+	text-transform: uppercase;
+}
+.title-28 {
+	color: #00122D;
+	@include adaptiveValue("font-size", 28, 18, $containerWidth, $minWidth, 1);
+	font-weight: 800;
+	@include adaptiveValue("line-height", 40, 30, $containerWidth, $minWidth, 1);
+	text-transform: uppercase;
+}
+.text-14 {
+	color: #FFF;
+	font-weight: 500;
+	line-height: 100%;
+	@include adaptiveValue("font-size", 14, 13, $containerWidth, $minWidth, 1);
+	&.bold {
+		font-weight: 600;
+	}
+}
+.text-15 {
+	color: #00122D;
+	font-weight: 500;
+	line-height: 160%;
+	@include adaptiveValue("font-size", 15, 14, $containerWidth, $minWidth, 1);
+	&.bold {
+		font-weight: 700;
+	}
+}
+.text-18 {
+	color: #FFF;
+	font-weight: 700;
+	line-height: 100%;
+	@include adaptiveValue("font-size", 18, 16,$containerWidth, $minWidth, 1);
+	&.bold {
+		font-weight: 800;
+	}
+}
+.button {
+	border-radius: 4px;
+	background-color: #F2BC39;
+	box-shadow: 0px 4px 10px 0px rgba(242, 188, 57, 0.35);
+	@include adaptiveValue("padding-top", 10, 8, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-bottom", 10, 8, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-left", 25, 15, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-right", 25, 15, $containerWidth, $minWidth, 1);
+	color: #000;
+	text-align: center;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: normal;
+	border: 1px solid #F2BC39;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&.long {
+		color: #033A8B;
+		@include adaptiveValue("padding-left", 40, 25, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-right", 40, 25, $containerWidth, $minWidth, 1);
+	}
+	transition: all .3s ease 0s;
+	&:hover, &:active, &:focus {
+		opacity: 1;
+		background: none;
+		color: #fff;
+		border: 1px solid rgba(255, 255, 255, 0.35);
+	}
+	&.opacity {
+		background: none;
+		color: #fff;
+		border: 1px solid rgba(255, 255, 255, 0.35);
+		@include adaptiveValue("padding-left", 40, 25, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-right", 40, 25, $containerWidth, $minWidth, 1);
+		&:hover, &:active, &:focus {
+			opacity: 1;
+			background-color: #F2BC39;
+			box-shadow: 0px 4px 10px 0px rgba(242, 188, 57, 0.35);
+			border: 1px solid #F2BC39;
+			color: #033A8B;
+		}
+	}
+}

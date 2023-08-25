@@ -1,0 +1,579 @@
+// Main__section
+//=======================================================================================================
+
+.main {
+
+	&__section {
+		@include adaptiveValue("padding-top", 100, 73, $containerWidth, $minWidth, 1);
+		background-image: url('../img/header/back.png');
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		height: 100vh;
+		display: flex;
+		align-items: center;
+		justify-content: flex-start;
+		@media(max-height: 600px) {
+			height: 100%;
+			@include adaptiveValue("padding-top", 173, 110, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("padding-bottom", 100, 53, $containerWidth, $minWidth, 1);
+		}
+	}
+
+	&__container {
+		width: 100%;
+	}
+
+	&__body {
+		max-width: 620px;
+		margin: 0 auto 0 0;
+		background: rgba(255, 255, 255, 0.10);
+		backdrop-filter: blur(10px);
+		border-left: 3px solid #F2BC39;
+		@include adaptiveValue("padding-left", 40, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-right", 55, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-bottom", 45, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-top", 45, 15, $containerWidth, $minWidth, 1);
+		h1 {
+			@include adaptiveValue("margin-top", 10, 5, $containerWidth, $minWidth, 1);
+			@include adaptiveValue("margin-bottom", 15, 8, $containerWidth, $minWidth, 1);
+		}
+		p {
+			line-height: 23px;
+		}
+	}
+
+	&__button {
+		@include adaptiveValue("margin-top", 30, 15, $containerWidth, $minWidth, 1);
+		gap: 15px;
+		display: flex;
+		justify-content: space-between;
+		@media(max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+}
+
+// Advantages__section
+//=======================================================================================================
+.advantages {
+
+	&__section {
+		@include adaptiveValue("padding-top", 90, 45, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		@include adaptiveValue("gap", 30, 15, $containerWidth, $minWidth, 1);
+		@media(max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		flex: 0 0 300px;
+		@media(max-width: 992px) {
+			flex: 0 0 250px;
+		}
+		@media(max-width: 768px) {
+			flex: 0 0 210px;
+		}
+		@media(max-width: 500px) {
+			flex: 0 1 auto;
+		}
+	}
+
+	&__right {
+		@media(max-width: 500px) {
+			width: 100%;
+		}
+	}
+
+	&__swiper {
+	}
+
+	&__item {
+		border-radius: 15px;
+		border: 2px solid rgba(226, 235, 249, 0.85);
+		@include adaptiveValue("padding-top", 20, 10, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-right", 20, 10, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-bottom", 20, 10, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-left", 25, 15, $containerWidth, $minWidth, 1);
+		img {
+			border-radius: 15px;
+			background-color: #EAF3FF;
+			@include adaptiveValue("padding", 10, 5, $containerWidth, $minWidth, 1);
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+		p {
+			text-transform: uppercase;
+			@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+		}
+	}
+}
+
+.advantages-slider {
+
+	&__arrows {
+		@include adaptiveValue("margin-top", 50, 20, $containerWidth, $minWidth, 1);
+		display: flex;
+		@include adaptiveValue("gap", 20, 10, $containerWidth, $minWidth, 1);
+	}
+
+	&__arrow-prev {
+		background-image: url('../img/icons/arrow-left.png');
+		&:hover, &:active, &:focus {
+			background-image: url('../img/icons/arrow-left-hover.png');
+		}
+	}
+
+	&__arrow {
+		cursor: pointer;
+		border-radius: 15px;
+		background-color: #EAF3FF;
+		background-position: center;
+		background-size: inherit;
+		background-repeat: no-repeat;
+		transition: all .3s ease 0s;
+		width: 40px;
+		height: 40px;
+		&:hover, &:active, &:focus {
+			background-color: #033A8B;
+		}
+	}
+
+	&__arrow-next {
+		background-image: url('../img/icons/arrow-right.png');
+		&:hover, &:active, &:focus {
+			background-image: url('../img/icons/arrow-right-hover.png');
+		}
+	}
+}
+.slider__arrows {
+	display: flex;
+	@include adaptiveValue("gap", 20, 10, $containerWidth, $minWidth, 1);
+}
+.slider__arrow {
+	cursor: pointer;
+		border-radius: 15px;
+		background-color: #EAF3FF;
+		background-position: center;
+		background-size: inherit;
+		background-repeat: no-repeat;
+		transition: all .3s ease 0s;
+		width: 40px;
+		height: 40px;
+		&:hover, &:active, &:focus {
+			background-color: #033A8B;
+		}
+	&-prev {
+		background-image: url('../img/icons/arrow-left.png');
+		&:hover, &:active, &:focus {
+			background-image: url('../img/icons/arrow-left-hover.png');
+		}
+	}
+	&-next {
+		background-image: url('../img/icons/arrow-right.png');
+		&:hover, &:active, &:focus {
+			background-image: url('../img/icons/arrow-right-hover.png');
+		}
+	}
+}
+
+
+// Advantages__section
+//=======================================================================================================
+.products {
+
+	&__section {
+		@include adaptiveValue("padding-top", 120, 50, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 40, 20, $containerWidth, $minWidth, 1);
+		display: grid;
+		@include adaptiveValue("column-gap", 30, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("row-gap", 40, 20, $containerWidth, $minWidth, 1);
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+	&__item {
+		a:hover, a:active, a:focus {
+			.products__image img {
+				transform: scale(1.05);
+			}
+		}
+	}
+
+	&__image {
+		border-radius: 15px;
+		@include adaptiveValue("height", 190, 150, $containerWidth, $minWidth, 1);
+		overflow: hidden;
+		img {
+			border-radius: 15px;
+			transition: all .5s ease 0s;
+		}
+	}
+
+	&__text {
+		@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+		p {
+			color: #00122D;
+			text-transform: uppercase;
+		}
+	}
+
+	&__button {
+		@include adaptiveValue("margin-top", 40, 20, $containerWidth, $minWidth, 1);
+		display: flex;
+		justify-content: center;
+	}
+}
+.more {
+	border-radius: 4px;
+	background: #033A8B;
+	color: #fff;
+	font-size: 11px;
+	font-weight: 600;
+	line-height: normal;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include adaptiveValue("padding-top", 12, 10, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-bottom", 12, 10, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-right", 40, 30, $containerWidth, $minWidth, 1);
+	@include adaptiveValue("padding-left", 40, 30, $containerWidth, $minWidth, 1);
+}
+
+
+// Diplom__section
+//=======================================================================================================
+
+
+
+.diplom {
+
+	&__section {
+		@include adaptiveValue("padding-top", 120, 50, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		@include adaptiveValue("gap", 30, 15, $containerWidth, $minWidth, 1);
+		@media(max-width: 500px) {
+			flex-direction: column;
+		}
+	}
+
+	&__left {
+		flex: 0 0 285px;
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		@media(max-width: 768px) {
+			flex: 0 0 230px;
+		}
+		@media(max-width: 500px) {
+			flex: 0 1 auto;
+		}
+		p {
+			color: #818181;
+			@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+		}
+	}
+
+	&__right {
+		@media(max-width: 500px) {
+			width: 100%;
+		}
+	}
+
+	&__item {
+		text-align: center;
+		img {
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+
+.diplom-slider {
+
+	&__arrows {
+		@media(max-width: 500px) {
+			@include adaptiveValue("margin-top", 50, 20, $containerWidth, $minWidth, 1);
+		}
+	}
+
+	&__arrow-prev {
+	}
+
+	&__arrow {
+	}
+
+	&__arrow-next {
+	}
+}
+
+
+// About__section
+//=======================================================================================================
+
+
+
+.about {
+
+	&__section {
+		@include adaptiveValue("padding-top", 120, 50, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("gap", 30, 15, $containerWidth, $minWidth, 1);
+	}
+
+	&__left {
+		flex: 1 1 auto;
+	}
+
+	&__title {
+	}
+
+	&__text {
+		@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+		p {
+			color: #818181;
+			@include adaptiveValue("line-height", 23, 18, $containerWidth, $minWidth, 1);
+			&:not(:last-child) {
+				@include adaptiveValue("margin-bottom", 20, 10, $containerWidth, $minWidth, 1);
+			}
+		}
+	}
+
+	&__button {
+		display: flex;
+		justify-content: flex-start;
+		@include adaptiveValue("margin-top", 30, 15, $containerWidth, $minWidth, 1);
+	}
+
+	&__right {
+		border-radius: 15px;
+		flex: 0 0 510px;
+		min-width: 350px;
+		img {
+			border-radius: 15px;
+		}
+		@media(max-width: 1150px) {
+			flex: 0 0 400px;
+			height: 400px;
+		}
+		@media(max-width: 850px) {
+			display: none;
+		}
+	}
+}
+
+
+// Documents__section
+//=======================================================================================================
+
+
+
+.documents {
+
+	&__section {
+		@include adaptiveValue("padding-top", 120, 50, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__title {
+	}
+
+	&__text {
+		@include adaptiveValue("margin-top", 20, 10, $containerWidth, $minWidth, 1);
+		max-width: 885px;
+		p {
+			color: #818181;
+			font-weight: 500;
+			line-height: 23px;
+		}
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 30, 15, $containerWidth, $minWidth, 1);
+		display: flex;
+		@include adaptiveValue("gap", 30, 15, $containerWidth, $minWidth, 1);
+		@media(max-width: 950px) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__item {
+		border-radius: 15px;
+		border: 2px solid rgba(226, 235, 249, 0.85);
+		@include adaptiveValue("padding-top", 30, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-right", 10, 8, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-left", 10, 8, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-bottom", 20, 10, $containerWidth, $minWidth, 1);
+		flex: 0 1 25%;
+		@media(max-width: 950px) {
+			flex: 0 1 calc(50% - 13px);
+		}
+		@media(max-width: 550px) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__image {
+		display: flex;
+		justify-content: center;
+	}
+
+	&__subtext {
+		text-align: center;
+		@include adaptiveValue("margin-top", 20, 15, $containerWidth, $minWidth, 1);
+		p {
+			color: #818181;
+			font-weight: 500;
+			line-height: 23px;
+		}
+	}
+}
+
+
+
+
+// Reviews__section
+//=======================================================================================================
+
+.reviews {
+
+	&__section {
+		@include adaptiveValue("padding-top", 120, 50, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__title {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 20, 15, $containerWidth, $minWidth, 1);
+	}
+
+	&__swiper {
+	}
+
+	&__item {
+		border-radius: 15px;
+		border: 2px solid rgba(226, 235, 249, 0.85);
+		@include adaptiveValue("height", 400, 380, $containerWidth, $minWidth, 1);
+		cursor: pointer;
+		img {
+			border-radius: 15px;
+		}
+	}
+}
+
+// Contacts__section
+//=======================================================================================================
+
+
+
+.contacts {
+
+	&__section {
+		@include adaptiveValue("padding-top", 120, 50, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-bottom", 100, 50, $containerWidth, $minWidth, 1);
+	}
+
+	&__container {
+	}
+
+	&__body {
+		border-radius: 15px;
+		position: relative;
+		iframe {
+			width: 100%;
+			border-radius: 15px;
+			height: 400px;
+			@media(max-width: 750px) {
+				height: 250px;
+			}
+		}
+	}
+
+	&__block {
+		position: absolute;
+		@include adaptiveValue("top", 40, 100, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("right", 40, 0, $containerWidth, $minWidth, 1);
+		border-radius: 15px;
+		border: 2px solid rgba(226, 235, 249, 0.85);
+		background-color: #FFF;
+		max-width: 540px;
+		@include adaptiveValue("padding-top", 30, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-bottom", 30, 15, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-right", 40, 10, $containerWidth, $minWidth, 1);
+		@include adaptiveValue("padding-left", 40, 10, $containerWidth, $minWidth, 1);
+		@media(max-width: 750px) {
+			position: relative;
+			top: 0;
+			right: auto;
+			@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
+		}
+	}
+
+	&__title {
+		@include adaptiveValue("margin-bottom", 20, 10, $containerWidth, $minWidth, 1);
+	}
+
+	&__item {
+		@include adaptiveValue("margin-bottom", 20, 10, $containerWidth, $minWidth, 1);
+		a {
+			display: flex;
+			align-items: center;
+			@include adaptiveValue("gap", 13, 8, $containerWidth, $minWidth, 1);
+		}
+		p {
+			color: #818181;
+			font-weight: 500;
+			line-height: 23px;
+		}
+	}
+
+	&__button {
+		display: flex;
+		justify-content: flex-start;
+		@include adaptiveValue("margin-left", 35, 30, $containerWidth, $minWidth, 1);
+		a {
+			&:hover, &:active, &:focus {
+				color: #000;
+				border: 1px solid #F2BC39;
+			}
+		}
+	}
+}
+

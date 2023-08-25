@@ -1,0 +1,116 @@
+body::after {
+	content: "";
+	background-color: rgba(0, 0, 0, 0.5);
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	opacity: 0;
+	transition: opacity 0.8s ease 0s;
+	pointer-events: none;
+	z-index: 149;
+}
+body.popup-show::after {
+	opacity: 1;
+}
+.popup {
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	z-index: 100;
+	padding: rem(30) rem(10);
+	transition: visibility 0.8s ease 0s;
+	visibility: hidden;
+	z-index: 150;
+	pointer-events: none;
+}
+.popup_show {
+	visibility: visible;
+	overflow: auto;
+	pointer-events: auto;
+}
+.popup_show .popup__content {
+	visibility: visible;
+	transform: scale(1);
+}
+.popup__wrapper {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	min-height: 100%;
+	flex: 1 1 auto;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.popup__content {
+	visibility: hidden;
+	text-align: center;
+	transform: scale(0);
+	transition: transform 0.3s ease 0s;
+	background-color: #eee;
+	padding: rem(40);
+	width: 100%;
+	max-width: rem(450);
+	border-radius: rem(20);
+	.lock & {
+		visibility: visible;
+	}
+	@media (max-width: $mobileSmall) {
+		padding: rem(20);
+	}
+}
+
+.popup {
+	&__close {
+		position: absolute;
+		right: -10px;
+		top: -10px;
+		width: 25px;
+		height: 25px;
+		background-color: #eee;
+		border-radius: 50%;
+		border: 1px solid #000;
+		&::before {
+			content: "";
+			top: 11px;
+			left: 4px;
+			position: absolute;
+			background-color: #000;
+			width: 15px;
+			height: 2px;
+			transform: rotate(45deg);
+		}
+		&::after {
+			content: "";
+			top: 11px;
+			left: 4px;
+			position: absolute;
+			background-color: #000;
+			width: 15px;
+			height: 2px;
+			transform: rotate(-45deg);
+		}
+	}
+
+	&__title {
+		font-family: $fontFamily;
+		font-weight: 900;
+		font-size: 28px;
+		color: $mainColor;
+		@include adaptiveValue("margin-bottom", 20, 17, $containerWidth, $minWidth, 1);
+	}
+
+	&__subtitle {
+		font-family: $fontFamily;
+		font-weight: 400;
+		font-size: 16px;
+		color: $mainColor;
+		line-height: 1.6;
+		@include adaptiveValue("margin-bottom", 20, 17, $containerWidth, $minWidth, 1);
+	}
+}
