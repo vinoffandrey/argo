@@ -540,8 +540,8 @@
 		@include adaptiveValue("padding-left", 40, 10, $containerWidth, $minWidth, 1);
 		@media(max-width: 750px) {
 			position: relative;
-			top: 0;
-			right: auto;
+			top: 0!important;
+			right: auto!important;
 			@include adaptiveValue("margin-top", 30, 20, $containerWidth, $minWidth, 1);
 		}
 	}

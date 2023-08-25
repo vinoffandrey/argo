@@ -2891,8 +2891,8 @@ a:active, a:focus, a:hover {
 @media (max-width: 750px) {
   .contacts__block {
     position: relative;
-    top: 0;
-    right: auto;
+    top: 0 !important;
+    right: auto !important;
   }
 }
 @media (max-width: 750px) and (min-width: 81.25em) {
